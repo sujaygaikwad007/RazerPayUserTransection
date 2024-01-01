@@ -7,23 +7,41 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1F5A307D2B42881E008C5054 /* Welcome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F5A307C2B42881E008C5054 /* Welcome.swift */; };
+		1F5A30812B428A02008C5054 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F5A30802B428A02008C5054 /* Model.swift */; };
+		1F8CF0AD2B42800200385799 /* ResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F8CF0AB2B42800200385799 /* ResultTableViewCell.swift */; };
+		1F8CF0AE2B42800200385799 /* ResultTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F8CF0AC2B42800200385799 /* ResultTableViewCell.xib */; };
 		1F97E6C22B3E95020069A37B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F97E6C12B3E95020069A37B /* AppDelegate.swift */; };
 		1F97E6C42B3E95020069A37B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F97E6C32B3E95020069A37B /* SceneDelegate.swift */; };
-		1F97E6C62B3E95020069A37B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F97E6C52B3E95020069A37B /* ViewController.swift */; };
+		1F97E6C62B3E95020069A37B /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F97E6C52B3E95020069A37B /* StartViewController.swift */; };
 		1F97E6C92B3E95020069A37B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F97E6C72B3E95020069A37B /* Main.storyboard */; };
 		1F97E6CB2B3E95050069A37B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F97E6CA2B3E95050069A37B /* Assets.xcassets */; };
 		1F97E6CE2B3E95050069A37B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F97E6CC2B3E95050069A37B /* LaunchScreen.storyboard */; };
+		1F97E6D62B3E982B0069A37B /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F97E6D52B3E982B0069A37B /* SignInViewController.swift */; };
+		1F97E6D82B3E99D30069A37B /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F97E6D72B3E99D30069A37B /* SignUpViewController.swift */; };
+		1F97E6DA2B3EAC3B0069A37B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1F97E6D92B3EAC3B0069A37B /* GoogleService-Info.plist */; };
+		8EF03BDC97A62520E2616D42 /* Pods_RazerPayUserTransection.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E52EB9D9CB437362F8D2592 /* Pods_RazerPayUserTransection.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1F5A307C2B42881E008C5054 /* Welcome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Welcome.swift; sourceTree = "<group>"; };
+		1F5A30802B428A02008C5054 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		1F8CF0AB2B42800200385799 /* ResultTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultTableViewCell.swift; sourceTree = "<group>"; };
+		1F8CF0AC2B42800200385799 /* ResultTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResultTableViewCell.xib; sourceTree = "<group>"; };
 		1F97E6BE2B3E95020069A37B /* RazerPayUserTransection.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RazerPayUserTransection.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F97E6C12B3E95020069A37B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1F97E6C32B3E95020069A37B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		1F97E6C52B3E95020069A37B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1F97E6C52B3E95020069A37B /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		1F97E6C82B3E95020069A37B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1F97E6CA2B3E95050069A37B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1F97E6CD2B3E95050069A37B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1F97E6CF2B3E95050069A37B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1F97E6D52B3E982B0069A37B /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		1F97E6D72B3E99D30069A37B /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		1F97E6D92B3EAC3B0069A37B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		8CF74CBF7FDDDC3B05A9700C /* Pods-RazerPayUserTransection.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RazerPayUserTransection.debug.xcconfig"; path = "Target Support Files/Pods-RazerPayUserTransection/Pods-RazerPayUserTransection.debug.xcconfig"; sourceTree = "<group>"; };
+		9E52EB9D9CB437362F8D2592 /* Pods_RazerPayUserTransection.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RazerPayUserTransection.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B5A7913D79ABE5D66C5D2BC8 /* Pods-RazerPayUserTransection.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RazerPayUserTransection.release.xcconfig"; path = "Target Support Files/Pods-RazerPayUserTransection/Pods-RazerPayUserTransection.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +49,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8EF03BDC97A62520E2616D42 /* Pods_RazerPayUserTransection.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1F8CF0AA2B427FB200385799 /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				1F8CF0AB2B42800200385799 /* ResultTableViewCell.swift */,
+				1F8CF0AC2B42800200385799 /* ResultTableViewCell.xib */,
+			);
+			path = cell;
+			sourceTree = "<group>";
+		};
 		1F97E6B52B3E95020069A37B = {
 			isa = PBXGroup;
 			children = (
 				1F97E6C02B3E95020069A37B /* RazerPayUserTransection */,
 				1F97E6BF2B3E95020069A37B /* Products */,
+				D1F759765FDA9C6C60EDC903 /* Pods */,
+				FD62BF66B7E42CBF5E134AD0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +86,38 @@
 		1F97E6C02B3E95020069A37B /* RazerPayUserTransection */ = {
 			isa = PBXGroup;
 			children = (
+				1F8CF0AA2B427FB200385799 /* cell */,
+				1F97E6D92B3EAC3B0069A37B /* GoogleService-Info.plist */,
 				1F97E6C12B3E95020069A37B /* AppDelegate.swift */,
 				1F97E6C32B3E95020069A37B /* SceneDelegate.swift */,
-				1F97E6C52B3E95020069A37B /* ViewController.swift */,
+				1F5A30802B428A02008C5054 /* Model.swift */,
+				1F97E6C52B3E95020069A37B /* StartViewController.swift */,
+				1F97E6D52B3E982B0069A37B /* SignInViewController.swift */,
+				1F97E6D72B3E99D30069A37B /* SignUpViewController.swift */,
 				1F97E6C72B3E95020069A37B /* Main.storyboard */,
+				1F5A307C2B42881E008C5054 /* Welcome.swift */,
 				1F97E6CA2B3E95050069A37B /* Assets.xcassets */,
 				1F97E6CC2B3E95050069A37B /* LaunchScreen.storyboard */,
 				1F97E6CF2B3E95050069A37B /* Info.plist */,
 			);
 			path = RazerPayUserTransection;
+			sourceTree = "<group>";
+		};
+		D1F759765FDA9C6C60EDC903 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8CF74CBF7FDDDC3B05A9700C /* Pods-RazerPayUserTransection.debug.xcconfig */,
+				B5A7913D79ABE5D66C5D2BC8 /* Pods-RazerPayUserTransection.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		FD62BF66B7E42CBF5E134AD0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9E52EB9D9CB437362F8D2592 /* Pods_RazerPayUserTransection.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +127,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1F97E6D22B3E95050069A37B /* Build configuration list for PBXNativeTarget "RazerPayUserTransection" */;
 			buildPhases = (
+				F7C33B8B984D782E04468588 /* [CP] Check Pods Manifest.lock */,
 				1F97E6BA2B3E95020069A37B /* Sources */,
 				1F97E6BB2B3E95020069A37B /* Frameworks */,
 				1F97E6BC2B3E95020069A37B /* Resources */,
+				3D33F774001FB1A810223069 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -125,7 +180,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F8CF0AE2B42800200385799 /* ResultTableViewCell.xib in Resources */,
 				1F97E6CE2B3E95050069A37B /* LaunchScreen.storyboard in Resources */,
+				1F97E6DA2B3EAC3B0069A37B /* GoogleService-Info.plist in Resources */,
 				1F97E6CB2B3E95050069A37B /* Assets.xcassets in Resources */,
 				1F97E6C92B3E95020069A37B /* Main.storyboard in Resources */,
 			);
@@ -133,14 +190,61 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3D33F774001FB1A810223069 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RazerPayUserTransection/Pods-RazerPayUserTransection-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RazerPayUserTransection/Pods-RazerPayUserTransection-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RazerPayUserTransection/Pods-RazerPayUserTransection-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F7C33B8B984D782E04468588 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RazerPayUserTransection-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		1F97E6BA2B3E95020069A37B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1F97E6C62B3E95020069A37B /* ViewController.swift in Sources */,
+				1F97E6D62B3E982B0069A37B /* SignInViewController.swift in Sources */,
+				1F97E6C62B3E95020069A37B /* StartViewController.swift in Sources */,
 				1F97E6C22B3E95020069A37B /* AppDelegate.swift in Sources */,
 				1F97E6C42B3E95020069A37B /* SceneDelegate.swift in Sources */,
+				1F8CF0AD2B42800200385799 /* ResultTableViewCell.swift in Sources */,
+				1F97E6D82B3E99D30069A37B /* SignUpViewController.swift in Sources */,
+				1F5A307D2B42881E008C5054 /* Welcome.swift in Sources */,
+				1F5A30812B428A02008C5054 /* Model.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,6 +388,7 @@
 		};
 		1F97E6D32B3E95050069A37B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8CF74CBF7FDDDC3B05A9700C /* Pods-RazerPayUserTransection.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -291,6 +396,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = RazerPayUserTransection/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = RazerPay;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -311,6 +417,7 @@
 		};
 		1F97E6D42B3E95050069A37B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B5A7913D79ABE5D66C5D2BC8 /* Pods-RazerPayUserTransection.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -318,6 +425,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = RazerPayUserTransection/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = RazerPay;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
