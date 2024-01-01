@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1F5A307D2B42881E008C5054 /* Welcome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F5A307C2B42881E008C5054 /* Welcome.swift */; };
+		1F3830B82B42A0250014D128 /* PaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F3830B72B42A0250014D128 /* PaymentViewController.swift */; };
+		1F5A307D2B42881E008C5054 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F5A307C2B42881E008C5054 /* WelcomeViewController.swift */; };
 		1F5A30812B428A02008C5054 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F5A30802B428A02008C5054 /* Model.swift */; };
 		1F8CF0AD2B42800200385799 /* ResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F8CF0AB2B42800200385799 /* ResultTableViewCell.swift */; };
 		1F8CF0AE2B42800200385799 /* ResultTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F8CF0AC2B42800200385799 /* ResultTableViewCell.xib */; };
@@ -24,7 +25,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1F5A307C2B42881E008C5054 /* Welcome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Welcome.swift; sourceTree = "<group>"; };
+		1F3830B72B42A0250014D128 /* PaymentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentViewController.swift; sourceTree = "<group>"; };
+		1F5A307C2B42881E008C5054 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		1F5A30802B428A02008C5054 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		1F8CF0AB2B42800200385799 /* ResultTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultTableViewCell.swift; sourceTree = "<group>"; };
 		1F8CF0AC2B42800200385799 /* ResultTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResultTableViewCell.xib; sourceTree = "<group>"; };
@@ -95,7 +97,8 @@
 				1F97E6D52B3E982B0069A37B /* SignInViewController.swift */,
 				1F97E6D72B3E99D30069A37B /* SignUpViewController.swift */,
 				1F97E6C72B3E95020069A37B /* Main.storyboard */,
-				1F5A307C2B42881E008C5054 /* Welcome.swift */,
+				1F3830B72B42A0250014D128 /* PaymentViewController.swift */,
+				1F5A307C2B42881E008C5054 /* WelcomeViewController.swift */,
 				1F97E6CA2B3E95050069A37B /* Assets.xcassets */,
 				1F97E6CC2B3E95050069A37B /* LaunchScreen.storyboard */,
 				1F97E6CF2B3E95050069A37B /* Info.plist */,
@@ -243,7 +246,8 @@
 				1F97E6C42B3E95020069A37B /* SceneDelegate.swift in Sources */,
 				1F8CF0AD2B42800200385799 /* ResultTableViewCell.swift in Sources */,
 				1F97E6D82B3E99D30069A37B /* SignUpViewController.swift in Sources */,
-				1F5A307D2B42881E008C5054 /* Welcome.swift in Sources */,
+				1F5A307D2B42881E008C5054 /* WelcomeViewController.swift in Sources */,
+				1F3830B82B42A0250014D128 /* PaymentViewController.swift in Sources */,
 				1F5A30812B428A02008C5054 /* Model.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

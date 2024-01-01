@@ -20,33 +20,35 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DtJ-RC-cV8">
                         <rect key="frame" x="0.0" y="0.0" width="347" height="115"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="udd-nB-7Pn">
-                                <rect key="frame" x="10" y="5" width="327" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="wB8-1U-BvR"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="09X-rG-bwK">
-                                <rect key="frame" x="10" y="55" width="327" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="S9G-i3-BBK"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="hno-gb-hCc">
+                                <rect key="frame" x="10" y="10" width="327" height="65"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="udd-nB-7Pn">
+                                        <rect key="frame" x="0.0" y="0.0" width="327" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="wB8-1U-BvR"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="09X-rG-bwK">
+                                        <rect key="frame" x="0.0" y="35" width="327" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="S9G-i3-BBK"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="09X-rG-bwK" secondAttribute="trailing" constant="10" id="N5G-HJ-sXd"/>
-                            <constraint firstAttribute="trailing" secondItem="udd-nB-7Pn" secondAttribute="trailing" constant="10" id="cZN-e0-K2U"/>
-                            <constraint firstItem="udd-nB-7Pn" firstAttribute="leading" secondItem="DtJ-RC-cV8" secondAttribute="leading" constant="10" id="eKS-aC-1gh"/>
-                            <constraint firstItem="09X-rG-bwK" firstAttribute="top" secondItem="udd-nB-7Pn" secondAttribute="bottom" constant="20" id="efY-ha-o5c"/>
-                            <constraint firstItem="09X-rG-bwK" firstAttribute="leading" secondItem="DtJ-RC-cV8" secondAttribute="leading" constant="10" id="eqE-7X-Tue"/>
-                            <constraint firstAttribute="bottom" secondItem="09X-rG-bwK" secondAttribute="bottom" constant="30" id="u3Z-tK-9B6"/>
+                            <constraint firstAttribute="trailing" secondItem="hno-gb-hCc" secondAttribute="trailing" constant="10" id="4AZ-DS-ila"/>
+                            <constraint firstItem="hno-gb-hCc" firstAttribute="top" secondItem="DtJ-RC-cV8" secondAttribute="top" constant="10" id="M2W-bd-UwW"/>
+                            <constraint firstItem="hno-gb-hCc" firstAttribute="leading" secondItem="DtJ-RC-cV8" secondAttribute="leading" constant="10" id="Wqc-eh-BHd"/>
                         </constraints>
                     </view>
                 </subviews>

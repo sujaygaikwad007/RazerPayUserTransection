@@ -15,9 +15,19 @@ class SignInViewController: UIViewController {
         
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
+   
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         txtUsername.text = userEmail
+
+        
+        if UserDefaults.standard.bool(forKey: "isLoggedIn") {
+            navigateToMainScreen()
+        } else {
+            self.txtUsername.text = !userEmail.isEmpty ? self.userEmail : ""
+        }
+        
     }
     
     
@@ -39,9 +49,8 @@ class SignInViewController: UIViewController {
                 print("Error creating user: \(error.localizedDescription)")
             } else {
                 
-                print("Welcome----")
-                let welcomeVC = self.storyboard?.instantiateViewController(withIdentifier: "Welcome") as! Welcome
-                self.navigationController?.pushViewController(welcomeVC, animated: true)
+                UserDefaults.standard.set(true, forKey: "isLoggedIn")
+                self.navigateToMainScreen()
                 
                 self.txtUsername.text = ""
                 self.txtPassword.text = ""
@@ -51,4 +60,20 @@ class SignInViewController: UIViewController {
     }
     
     
+    func navigateToMainScreen() {
+        if let uid = Auth.auth().currentUser?.uid {
+            let welcomeVC = self.storyboard?.instantiateViewController(withIdentifier: "Welcome") as! WelcomeViewController
+
+            self.navigationController?.pushViewController(welcomeVC, animated: true)
+        }
+    }
+    
+    
 }
+
+extension SignInViewController: WelcomeViewControllerDelegate {
+    func didSignOut() {
+        UserDefaults.standard.set(false, forKey: "isLoggedIn")
+    }
+}
+

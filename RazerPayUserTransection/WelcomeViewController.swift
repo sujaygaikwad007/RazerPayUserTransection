@@ -5,7 +5,11 @@ import FirebaseAuth
 import FirebaseDatabase
 import JGProgressHUD
 
-class Welcome: UIViewController {
+protocol WelcomeViewControllerDelegate: AnyObject {
+    func didSignOut()
+}
+
+class WelcomeViewController: UIViewController {
     
     
     @IBOutlet weak var tableData: UITableView!
@@ -13,13 +17,21 @@ class Welcome: UIViewController {
     var users:[User] = []
     var jgProgrss : JGProgressHUD!
     
+    weak var delegate: WelcomeViewControllerDelegate?
+    
+    
+    
+    @IBOutlet weak var signOutBtn: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationItem.hidesBackButton = true
 
         tableData.dataSource = self
         tableData.delegate = self
         
         jgProgrss = JGProgressHUD(style:.dark)
+        signOutBtn.isHidden = true
         
         tableData.register(UINib(nibName: "ResultTableViewCell", bundle: .none), forCellReuseIdentifier: "ResultTableViewCell")
         
@@ -57,17 +69,31 @@ class Welcome: UIViewController {
             
             DispatchQueue.main.async {
                 self.jgProgrss.dismiss(animated: true)
+                self.signOutBtn.isHidden = false
                 self.tableData.reloadData()
 
             }
         }
     }
     
-
+    
+    @IBAction func signOutBtn(_ sender: UIButton) {
+        
+        do {
+            try Auth.auth().signOut()
+            navigationController?.popToRootViewController(animated: true)
+            delegate?.didSignOut()
+            
+        } catch let signOutError as NSError{
+            
+            print("Error singing out: \(signOutError.localizedDescription)")
+        }
+    }
+    
 }
 
 
-extension Welcome: UITableViewDelegate, UITableViewDataSource{
+extension WelcomeViewController: UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
@@ -97,5 +123,11 @@ extension Welcome: UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("Razorpay---")
+        let user = users[indexPath.row]
+        
+        let paymentVC = storyboard?.instantiateViewController(withIdentifier: "PaymentViewController") as! PaymentViewController
+        paymentVC.username = user.username
+        paymentVC.userEmail = user.email
+        self.navigationController?.pushViewController(paymentVC, animated: true)
     }
 }

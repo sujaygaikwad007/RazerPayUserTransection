@@ -214,35 +214,101 @@
             </objects>
             <point key="canvasLocation" x="2309" y="76"/>
         </scene>
-        <!--Welcome-->
+        <!--Welcome View Controller-->
         <scene sceneID="xPJ-vQ-c99">
             <objects>
-                <viewController storyboardIdentifier="Welcome" useStoryboardIdentifierAsRestorationIdentifier="YES" id="L56-k0-obZ" customClass="Welcome" customModule="RazerPayUserTransection" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Welcome" useStoryboardIdentifierAsRestorationIdentifier="YES" id="L56-k0-obZ" customClass="WelcomeViewController" customModule="RazerPayUserTransection" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qGi-TO-nQW">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="JdO-WV-6O1">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="123" width="414" height="739"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zv3-U0-YYU">
+                                <rect key="frame" x="329" y="44" width="78" height="31"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="m76-bz-jgN"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Sign out"/>
+                                <connections>
+                                    <action selector="signOutBtn:" destination="L56-k0-obZ" eventType="touchUpInside" id="PEW-PE-6uu"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="7Ml-dt-kgV"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="JdO-WV-6O1" firstAttribute="top" secondItem="7Ml-dt-kgV" secondAttribute="top" id="Xff-bC-nff"/>
-                            <constraint firstItem="7Ml-dt-kgV" firstAttribute="bottom" secondItem="JdO-WV-6O1" secondAttribute="bottom" id="cVO-uK-dOT"/>
-                            <constraint firstItem="7Ml-dt-kgV" firstAttribute="trailing" secondItem="JdO-WV-6O1" secondAttribute="trailing" id="f4W-1e-9Vt"/>
-                            <constraint firstItem="JdO-WV-6O1" firstAttribute="leading" secondItem="7Ml-dt-kgV" secondAttribute="leading" id="k09-0Y-lQM"/>
+                            <constraint firstItem="JdO-WV-6O1" firstAttribute="bottom" secondItem="7Ml-dt-kgV" secondAttribute="bottom" id="Pf9-JA-ZrF"/>
+                            <constraint firstItem="JdO-WV-6O1" firstAttribute="trailing" secondItem="7Ml-dt-kgV" secondAttribute="trailing" id="XF8-07-rzL"/>
+                            <constraint firstItem="7Ml-dt-kgV" firstAttribute="trailing" secondItem="Zv3-U0-YYU" secondAttribute="trailing" constant="7" id="cBK-D9-Wah"/>
+                            <constraint firstItem="JdO-WV-6O1" firstAttribute="leading" secondItem="7Ml-dt-kgV" secondAttribute="leading" id="qGW-0w-xQc"/>
+                            <constraint firstItem="JdO-WV-6O1" firstAttribute="top" secondItem="Zv3-U0-YYU" secondAttribute="bottom" constant="48" id="tXC-8m-Unk"/>
+                            <constraint firstItem="Zv3-U0-YYU" firstAttribute="top" secondItem="7Ml-dt-kgV" secondAttribute="top" id="vMd-8V-sch"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="signOutBtn" destination="Zv3-U0-YYU" id="bYt-Wo-BmB"/>
                         <outlet property="tableData" destination="JdO-WV-6O1" id="MIo-2J-Ovs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dM0-aO-tsv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2991" y="76"/>
+            <point key="canvasLocation" x="2989.8550724637685" y="75.669642857142847"/>
+        </scene>
+        <!--Payment View Controller-->
+        <scene sceneID="nk1-Dc-DTL">
+            <objects>
+                <viewController storyboardIdentifier="PaymentViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="1Qo-2q-3FJ" customClass="PaymentViewController" customModule="RazerPayUserTransection" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4Ij-4i-MR2">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W0I-Jj-j7y">
+                                <rect key="frame" x="20" y="246" width="374" height="40"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="xAb-si-ad5"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Pay"/>
+                                <connections>
+                                    <action selector="paymentBtn:" destination="1Qo-2q-3FJ" eventType="touchUpInside" id="KiS-54-tcb"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="14r-RN-nnf">
+                                <rect key="frame" x="10" y="186" width="394" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="v8y-v1-7GK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="D8w-AD-EvK"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="W0I-Jj-j7y" firstAttribute="top" secondItem="14r-RN-nnf" secondAttribute="bottom" constant="20" id="7sD-Cu-tCs"/>
+                            <constraint firstItem="W0I-Jj-j7y" firstAttribute="leading" secondItem="D8w-AD-EvK" secondAttribute="leading" constant="20" id="XuE-r0-R39"/>
+                            <constraint firstItem="D8w-AD-EvK" firstAttribute="trailing" secondItem="14r-RN-nnf" secondAttribute="trailing" constant="10" id="inq-I3-jHa"/>
+                            <constraint firstItem="D8w-AD-EvK" firstAttribute="trailing" secondItem="W0I-Jj-j7y" secondAttribute="trailing" constant="20" id="jNH-rL-zWT"/>
+                            <constraint firstItem="14r-RN-nnf" firstAttribute="leading" secondItem="D8w-AD-EvK" secondAttribute="leading" constant="10" id="jUR-Ba-J9T"/>
+                            <constraint firstItem="D8w-AD-EvK" firstAttribute="bottom" secondItem="W0I-Jj-j7y" secondAttribute="bottom" constant="576" id="uMb-fR-0v6"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="paymentBtn" destination="W0I-Jj-j7y" id="Ypx-N6-w4a"/>
+                        <outlet property="txtAmount" destination="14r-RN-nnf" id="Lyz-VM-DWv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lF4-1T-N2o" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3702.898550724638" y="75.669642857142847"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="kYQ-Gv-syc">
@@ -266,6 +332,9 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
