@@ -19,13 +19,19 @@ class PaymentViewController: MessagesViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        messagesCollectionView.messagesDataSource = self
-        messagesCollectionView.messagesLayoutDelegate = self
-        messagesCollectionView.messagesDisplayDelegate = self
-        
+        self.showMessageTimestampOnSwipeLeft = true
+
+        setupMessageCollection()
         configureMessageInputBar()
         observeMessages()
 
+    }
+    
+    func setupMessageCollection()
+    {
+        messagesCollectionView.messagesDataSource = self
+        messagesCollectionView.messagesLayoutDelegate = self
+        messagesCollectionView.messagesDisplayDelegate = self
     }
     
     
@@ -122,6 +128,18 @@ extension PaymentViewController: MessagesDataSource, MessagesLayoutDelegate, Mes
         return message.sender.senderId == selfSender.senderId
     }
     
+    //----code for timestamp
+   
+    func messageTimestampLabelAttributedText(for message: MessageType, at indexPath: IndexPath) -> NSAttributedString? {
+            let messageDate = message.sentDate
+            let formatter = DateFormatter()
+            formatter.dateFormat = "HH:mm"
+            let dateString = formatter.string(from: messageDate)
+            print("Date String is------\(dateString)")
+            return
+                NSAttributedString(string: dateString, attributes: [.font: UIFont.systemFont(ofSize: 12)])
+        }
+    
     
  
 
@@ -130,11 +148,15 @@ extension PaymentViewController: MessagesDataSource, MessagesLayoutDelegate, Mes
 extension PaymentViewController: RazorpayPaymentCompletionProtocol {
     func onPaymentSuccess(_ payment_id: String) {
         print("Payment Success: \(payment_id)")
+        sendMessage(text: "Successfull")
+
     }
     
     func onPaymentError(_ code: Int32, description str: String) {
         
         print("Payment Error: \(code) - \(str)")
+        sendMessage(text: "Failed")
+
     }
 }
 
@@ -147,7 +169,6 @@ extension PaymentViewController: InputBarAccessoryViewDelegate {
             return
         }
         startRazerPay(amount: amount)
-        sendMessage(text: text)
         inputBar.inputTextView.text = ""
     }
 }
