@@ -43,8 +43,13 @@ PODS:
   - GoogleUtilities/Reachability (7.12.0):
     - GoogleUtilities/Logger
   - GTMSessionFetcher/Core (3.2.0)
+  - InputBarAccessoryView (5.5.0):
+    - InputBarAccessoryView/Core (= 5.5.0)
+  - InputBarAccessoryView/Core (5.5.0)
   - JGProgressHUD (2.2)
   - leveldb-library (1.22.2)
+  - MessageKit (3.8.0):
+    - InputBarAccessoryView (~> 5.5.0)
   - PromisesObjC (2.3.1)
   - razorpay-pod (1.2.5)
   - RecaptchaInterop (100.0.0)
@@ -53,6 +58,7 @@ DEPENDENCIES:
   - Firebase/Auth
   - Firebase/Database
   - JGProgressHUD
+  - MessageKit
   - razorpay-pod (= 1.2.5)
 
 SPEC REPOS:
@@ -66,8 +72,10 @@ SPEC REPOS:
     - FirebaseSharedSwift
     - GoogleUtilities
     - GTMSessionFetcher
+    - InputBarAccessoryView
     - JGProgressHUD
     - leveldb-library
+    - MessageKit
     - PromisesObjC
     - razorpay-pod
     - RecaptchaInterop
@@ -82,12 +90,14 @@ SPEC CHECKSUMS:
   FirebaseSharedSwift: f34eeb7d3ea87a34497629b6ca41657beadef76a
   GoogleUtilities: 0759d1a57ebb953965c2dfe0ba4c82e95ccc2e34
   GTMSessionFetcher: 41b9ef0b4c08a6db4b7eb51a21ae5183ec99a2c8
+  InputBarAccessoryView: 1d7b0a672b36e370f01f264b3907ef39d03328e3
   JGProgressHUD: d83d7a981b85d11205e19ff8ad5bb9c40571c847
   leveldb-library: f03246171cce0484482ec291f88b6d563699ee06
+  MessageKit: a1ba0c69ebead94029867853eb44dd05b9b3f453
   PromisesObjC: c50d2056b5253dadbd6c2bea79b0674bd5a52fa4
   razorpay-pod: aa2df076ea44baab6cc8296c1ccc715fe2ca818c
   RecaptchaInterop: 7d1a4a01a6b2cb1610a47ef3f85f0c411434cb21
 
-PODFILE CHECKSUM: 9ddb6daa0d2ce7fcf839c98b4e1178ef46aa5adb
+PODFILE CHECKSUM: 45acfe8b4261ca6127f20aae7d9e6857b1390523
 
 COCOAPODS: 1.14.3

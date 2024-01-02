@@ -1,4 +1,3 @@
-
 import UIKit
 import Firebase
 import FirebaseAuth
@@ -25,7 +24,8 @@ class WelcomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.hidesBackButton = true
+        
+        
 
         tableData.dataSource = self
         tableData.delegate = self
@@ -39,7 +39,6 @@ class WelcomeViewController: UIViewController {
     }
     
 
-    
     func fetchUserDetailsFromFirebase(){
         
         jgProgrss.show(in: self.view)
@@ -58,7 +57,7 @@ class WelcomeViewController: UIViewController {
                    let uid = userData["uid"] as? String
                 {
                     
-                    let user = User(username: username, email: email, uid: uid)
+                    let user = User(username: username, email: email, uid: uid, messages: [] )
                     print("user from database---\(user)")
                     self.users.append(user)
                 }
@@ -126,8 +125,10 @@ extension WelcomeViewController: UITableViewDelegate, UITableViewDataSource{
         let user = users[indexPath.row]
         
         let paymentVC = storyboard?.instantiateViewController(withIdentifier: "PaymentViewController") as! PaymentViewController
+        paymentVC.title = user.username
         paymentVC.username = user.username
         paymentVC.userEmail = user.email
+        paymentVC.receiverUid = user.uid
         self.navigationController?.pushViewController(paymentVC, animated: true)
     }
 }

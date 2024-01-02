@@ -10,6 +10,8 @@ target 'RazerPayUserTransection' do
   pod 'Firebase/Auth'
   pod 'Firebase/Database'
   pod 'JGProgressHUD'
+  pod 'MessageKit'
+
 
 
 end

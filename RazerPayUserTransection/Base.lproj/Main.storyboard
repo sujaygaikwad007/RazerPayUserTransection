@@ -267,44 +267,9 @@
                     <view key="view" contentMode="scaleToFill" id="4Ij-4i-MR2">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W0I-Jj-j7y">
-                                <rect key="frame" x="20" y="246" width="374" height="40"/>
-                                <color key="backgroundColor" systemColor="systemBlueColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="xAb-si-ad5"/>
-                                </constraints>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Pay"/>
-                                <connections>
-                                    <action selector="paymentBtn:" destination="1Qo-2q-3FJ" eventType="touchUpInside" id="KiS-54-tcb"/>
-                                </connections>
-                            </button>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="14r-RN-nnf">
-                                <rect key="frame" x="10" y="186" width="394" height="40"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="v8y-v1-7GK"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                        </subviews>
                         <viewLayoutGuide key="safeArea" id="D8w-AD-EvK"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="W0I-Jj-j7y" firstAttribute="top" secondItem="14r-RN-nnf" secondAttribute="bottom" constant="20" id="7sD-Cu-tCs"/>
-                            <constraint firstItem="W0I-Jj-j7y" firstAttribute="leading" secondItem="D8w-AD-EvK" secondAttribute="leading" constant="20" id="XuE-r0-R39"/>
-                            <constraint firstItem="D8w-AD-EvK" firstAttribute="trailing" secondItem="14r-RN-nnf" secondAttribute="trailing" constant="10" id="inq-I3-jHa"/>
-                            <constraint firstItem="D8w-AD-EvK" firstAttribute="trailing" secondItem="W0I-Jj-j7y" secondAttribute="trailing" constant="20" id="jNH-rL-zWT"/>
-                            <constraint firstItem="14r-RN-nnf" firstAttribute="leading" secondItem="D8w-AD-EvK" secondAttribute="leading" constant="10" id="jUR-Ba-J9T"/>
-                            <constraint firstItem="D8w-AD-EvK" firstAttribute="bottom" secondItem="W0I-Jj-j7y" secondAttribute="bottom" constant="576" id="uMb-fR-0v6"/>
-                        </constraints>
                     </view>
-                    <connections>
-                        <outlet property="paymentBtn" destination="W0I-Jj-j7y" id="Ypx-N6-w4a"/>
-                        <outlet property="txtAmount" destination="14r-RN-nnf" id="Lyz-VM-DWv"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lF4-1T-N2o" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
