@@ -5,6 +5,9 @@ import MessageKit
 import InputBarAccessoryView
 
 class PaymentViewController: MessagesViewController {
+
+    
+    
     
     var razerPayKey = "rzp_test_Whae1nSIWphn9n"
     var username = ""
@@ -19,19 +22,15 @@ class PaymentViewController: MessagesViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.showMessageTimestampOnSwipeLeft = true
-        
-        setupMessageCollection()
-        configureMessageInputBar()
-        observeMessages()
-        
-    }
-    
-    func setupMessageCollection()
-    {
         messagesCollectionView.messagesDataSource = self
         messagesCollectionView.messagesLayoutDelegate = self
         messagesCollectionView.messagesDisplayDelegate = self
+        self.showMessageTimestampOnSwipeLeft = true
+
+        
+        configureMessageInputBar()
+        observeMessages()
+
     }
     
     
@@ -48,24 +47,24 @@ class PaymentViewController: MessagesViewController {
         let razerPay = RazorpayCheckout.initWithKey(razerPayKey, andDelegate: self)
         
         let options: [String:Any] = [
-            "name": username,
-            "description": "User Payment",
-            "image": "https://www.smilefoundationindia.org/wp-content/uploads/2022/09/SMILE-FOUNDATION-LOGO-e1662456150120-1.png",
-            "currency": "INR",
-            "amount": amount * 100,
-            "prefill": [
-                "email": userEmail,
-                "contact": "9876543210"
-            ],
-            "theme": [
-                "color": "#000"
-            ]
-        ]
-        
-        razerPay.open(options)
+                            "name": username,
+                            "description": "User Payment",
+                            "image": "https://www.smilefoundationindia.org/wp-content/uploads/2022/09/SMILE-FOUNDATION-LOGO-e1662456150120-1.png",
+                            "currency": "INR",
+                            "amount": amount * 100,
+                            "prefill": [
+                                "email": userEmail,
+                                "contact": "9876543210"
+                            ],
+                            "theme": [
+                                "color": "#000"
+                            ]
+                        ]
+                        
+                razerPay.open(options)
     }
     // payment method end------
-    
+
     
     
     //to get message from database observer method start----
@@ -87,19 +86,12 @@ class PaymentViewController: MessagesViewController {
                let senderId = messageData["senderId"] as? String,
                let displayName = messageData["displayName"] as? String,
                let text = messageData["text"] as? String,
-               let timestamp = messageData["timestamp"] as? TimeInterval,
-               let amount = messageData["amount"] as? Double
+               let timestamp = messageData["timestamp"] as? TimeInterval
             {
                 let sender = Sender(senderId: senderId, displayName: displayName)
                 print("Sender is-----\(sender)")
                 
-                let message = Message(
-                    sender: sender,
-                    messageId: snapshot.key,
-                    sentDate: Date(timeIntervalSince1970: timestamp),
-                    kind: .text(text),
-                    amount: amount
-                )
+                let message = Message(sender: sender, messageId: snapshot.key, sentDate: Date(timeIntervalSince1970: timestamp), kind: .text(text))
                 print("observeMessages Message is------\(message)")
                 
                 self.messages.append(message)
@@ -113,9 +105,6 @@ class PaymentViewController: MessagesViewController {
             }
         }
     }
-    
-    
-    
     //observer method end---
 }
 
@@ -139,67 +128,59 @@ extension PaymentViewController: MessagesDataSource, MessagesLayoutDelegate, Mes
     }
     
     //----code for timestamp
-    
+   
     func messageTimestampLabelAttributedText(for message: MessageType, at indexPath: IndexPath) -> NSAttributedString? {
-        let messageDate = message.sentDate
-        let formatter = DateFormatter()
-        formatter.dateFormat = "HH:mm"
-        let dateString = formatter.string(from: messageDate)
-        print("Date String is------\(dateString)")
-        return
-        NSAttributedString(string: dateString, attributes: [.font: UIFont.systemFont(ofSize: 12)])
-    }
-    
-    
-    
-    
+            let messageDate = message.sentDate
+            let formatter = DateFormatter()
+            formatter.dateFormat = "HH:mm"
+            let dateString = formatter.string(from: messageDate)
+            print("Date String is------\(dateString)")
+            return
+                NSAttributedString(string: dateString, attributes: [.font: UIFont.systemFont(ofSize: 12)])
+        }
+
 }
+
+
 
 extension PaymentViewController: RazorpayPaymentCompletionProtocol {
     func onPaymentSuccess(_ payment_id: String) {
         print("Payment Success: \(payment_id)")
-        
-        guard let amountString = messageInputBar.inputTextView.text,
-              let amount = Double(amountString) else {
-                  return
-              }
-        sendMessage(text: "Payment initaited. Amount:\(amount)", amount: amount)
+        sendMessage(text: "Done")
 
     }
     
     func onPaymentError(_ code: Int32, description str: String) {
         
         print("Payment Error: \(code) - \(str)")
-        
     }
 }
-
-
 extension PaymentViewController: InputBarAccessoryViewDelegate {
     
     func inputBar(_ inputBar: InputBarAccessoryView, didPressSendButtonWith text: String) {
-        
         guard let amountString = messageInputBar.inputTextView.text,
               let amount = Double(amountString) else {
-                  return
-              }
-       
+            return
+        }
         startRazerPay(amount: amount)
         inputBar.inputTextView.text = ""
     }
 }
 
 
+
+
+
 extension PaymentViewController {
     
-    func sendMessage(text: String, amount: Double) {
-        sendToUser(text: text, amount: amount)
+    func sendMessage(text: String) {
+        sendToUser(text: text)
         if selfSender.senderId == Auth.auth().currentUser?.uid {
-            sendFromUser(text: text, amount: amount)
+            sendFromUser(text: text)
         }
     }
     
-    func sendToUser(text: String, amount: Double) {
+    func sendToUser(text: String) {
         
         guard let user = Auth.auth().currentUser else { return }
         let senderId = user.uid
@@ -214,7 +195,6 @@ extension PaymentViewController {
             "senderId": user.uid,
             "displayName": user.displayName ?? "",
             "text": text,
-            "amount": amount,
             "timestamp": ServerValue.timestamp()
         ]
         
@@ -225,7 +205,7 @@ extension PaymentViewController {
         }
     }
     
-    func sendFromUser(text: String, amount: Double) {
+    func sendFromUser(text: String) {
         guard let user = Auth.auth().currentUser else { return }
         let senderId = user.uid
         let receiverId = receiverUid
@@ -239,7 +219,6 @@ extension PaymentViewController {
             "senderId": user.uid,
             "displayName": user.displayName ?? "",
             "text": text,
-            "amount": amount,
             "timestamp": ServerValue.timestamp()
         ]
         

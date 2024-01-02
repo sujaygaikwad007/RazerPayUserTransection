@@ -13,15 +13,7 @@ struct Message: MessageType {
     var messageId: String
     var sentDate: Date
     var kind: MessageKind
-    var amount: Double? 
-
-    init(sender: SenderType, messageId: String, sentDate: Date, kind: MessageKind, amount: Double?) {
-        self.sender = sender
-        self.messageId = messageId
-        self.sentDate = sentDate
-        self.kind = kind
-        self.amount = amount
-    }
+    
 }
 
 struct Sender: SenderType {
